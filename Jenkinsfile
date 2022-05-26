@@ -18,7 +18,7 @@ pipeline {
             steps {
                 nodejs('default nodejs') {
                     withCredentials([usernamePassword(credentialsId: '07ce8554-02ec-4ec9-86cf-01bbf95560b6', passwordVariable: 'JIRA_PASSWORD', usernameVariable: 'JIRA_USER'), file(credentialsId: 'sheets', variable: 'GSHEETS_CREDENTIAL_PATH')]) {
-                        sh "node LCH\ Scipts/DevPriorities.js "
+                        sh "node LCHScripts/DevPriorities.js "
                     }
                 }
             }
